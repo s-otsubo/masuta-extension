@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "masutabe ultra",
+  "version": "0.1.2",
+  "description": "masutabeとぬきスト、エロタレスト、DMM FREEをもっと便利に。",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["else.js", "masutabe.js", "nukist.js", "eroterest.js", "dmm.js"]
+    }
+  ],
+  "permissions": ["storage"]
+}
